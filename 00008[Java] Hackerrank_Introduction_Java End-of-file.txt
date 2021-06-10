@@ -1,0 +1,30 @@
+/*
+"In computing, End Of File (commonly abbreviated EOF) is a condition in a computer operating system where no more data can be read from a data source." — (Wikipedia: End-of-file)
+
+The challenge here is to read  lines of input until you reach EOF, then number and print all  lines of content.
+
+Hint: Java's Scanner.hasNext() method is helpful for this problem.
+
+Input Format
+
+Read some unknown  lines of input from stdin(System.in) until you reach EOF; each line of input contains a non-empty String.
+
+Link : https://www.hackerrank.com/challenges/java-end-of-file/problem
+
+-- Answer : 
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int i = 0;
+        String str;
+        while( sc.hasNext() ) {
+            str = sc.nextLine();
+            i++;
+            System.out.format("%d %s\n", i, str);
+        }
+    }
+}
